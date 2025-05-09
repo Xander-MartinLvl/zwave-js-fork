@@ -807,13 +807,13 @@ type CCNameMap = {
 	Battery: typeof CommandClasses["Battery"];
 	"Binary Sensor": typeof CommandClasses["Binary Sensor"];
 	"Binary Switch": typeof CommandClasses["Binary Switch"];
-	"CRC-16 Encapsulation": typeof CommandClasses["CRC-16 Encapsulation"];
 	"Central Scene": typeof CommandClasses["Central Scene"];
 	"Climate Control Schedule":
 		typeof CommandClasses["Climate Control Schedule"];
 	Clock: typeof CommandClasses["Clock"];
 	"Color Switch": typeof CommandClasses["Color Switch"];
 	Configuration: typeof CommandClasses["Configuration"];
+	"CRC-16 Encapsulation": typeof CommandClasses["CRC-16 Encapsulation"];
 	"Device Reset Locally": typeof CommandClasses["Device Reset Locally"];
 	"Door Lock": typeof CommandClasses["Door Lock"];
 	"Door Lock Logging": typeof CommandClasses["Door Lock Logging"];
@@ -841,9 +841,9 @@ type CCNameMap = {
 	"Multi Command": typeof CommandClasses["Multi Command"];
 	"Multilevel Sensor": typeof CommandClasses["Multilevel Sensor"];
 	"Multilevel Switch": typeof CommandClasses["Multilevel Switch"];
-	"No Operation": typeof CommandClasses["No Operation"];
 	"Node Naming and Location":
 		typeof CommandClasses["Node Naming and Location"];
+	"No Operation": typeof CommandClasses["No Operation"];
 	Notification: typeof CommandClasses["Notification"];
 	Powerlevel: typeof CommandClasses["Powerlevel"];
 	Protection: typeof CommandClasses["Protection"];
@@ -967,13 +967,13 @@ export interface CCAPIs {
 	Battery: import("../cc/BatteryCC.js").BatteryCCAPI;
 	"Binary Sensor": import("../cc/BinarySensorCC.js").BinarySensorCCAPI;
 	"Binary Switch": import("../cc/BinarySwitchCC.js").BinarySwitchCCAPI;
-	"CRC-16 Encapsulation": import("../cc/CRC16CC.js").CRC16CCAPI;
 	"Central Scene": import("../cc/CentralSceneCC.js").CentralSceneCCAPI;
 	"Climate Control Schedule":
 		import("../cc/ClimateControlScheduleCC.js").ClimateControlScheduleCCAPI;
 	Clock: import("../cc/ClockCC.js").ClockCCAPI;
 	"Color Switch": import("../cc/ColorSwitchCC.js").ColorSwitchCCAPI;
 	Configuration: import("../cc/ConfigurationCC.js").ConfigurationCCAPI;
+	"CRC-16 Encapsulation": import("../cc/CRC16CC.js").CRC16CCAPI;
 	"Device Reset Locally":
 		import("../cc/DeviceResetLocallyCC.js").DeviceResetLocallyCCAPI;
 	"Door Lock": import("../cc/DoorLockCC.js").DoorLockCCAPI;
@@ -1009,9 +1009,9 @@ export interface CCAPIs {
 		import("../cc/MultilevelSensorCC.js").MultilevelSensorCCAPI;
 	"Multilevel Switch":
 		import("../cc/MultilevelSwitchCC.js").MultilevelSwitchCCAPI;
-	"No Operation": import("../cc/NoOperationCC.js").NoOperationCCAPI;
 	"Node Naming and Location":
 		import("../cc/NodeNamingCC.js").NodeNamingAndLocationCCAPI;
+	"No Operation": import("../cc/NoOperationCC.js").NoOperationCCAPI;
 	Notification: import("../cc/NotificationCC.js").NotificationCCAPI;
 	Powerlevel: import("../cc/PowerlevelCC.js").PowerlevelCCAPI;
 	Protection: import("../cc/ProtectionCC.js").ProtectionCCAPI;
