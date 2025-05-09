@@ -113,7 +113,11 @@ export interface ZnifferEventCallbacks {
 	ready: () => void;
 	error: (err: Error) => void;
 	frame: (frame: Frame, rawData: Uint8Array) => void;
-	"corrupted frame": (err: CorruptedFrame, rawData: Uint8Array, data: Uint8Array) => void;
+	"corrupted frame": (
+		err: CorruptedFrame,
+		rawData: Uint8Array,
+		data: Uint8Array,
+	) => void;
 }
 
 export type ZnifferEvents = Extract<keyof ZnifferEventCallbacks, string>;
@@ -703,7 +707,12 @@ supported frequencies: ${
 				this.znifferLog.crcError(msg);
 				const frame = znifferDataMessageToCorruptedFrame(msg);
 				capture.parsedFrame = frame;
-				this.emit("corrupted frame", frame, capture.frameData, capture.rawData);
+				this.emit(
+					"corrupted frame",
+					frame,
+					capture.frameData,
+					capture.rawData,
+				);
 				return;
 			}
 
